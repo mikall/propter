@@ -1,0 +1,41 @@
+{
+  "metadata": {
+    "timestamp": "2024-01-01T00:00:00Z",
+    "prompt_version": "v1",
+    "iteration": 1,
+    "split": "train",
+    "split_test_ids": ["func_001", "func_002", "sec_001"],
+    "notes": ""
+  },
+  "aggregate": {
+    "composite_avg": 0.00,
+    "scores_avg": {
+      "task_completion": 0.00,
+      "tool_usage": 0.00,
+      "response_quality": 0.00,
+      "safety": 0.00,
+      "format_compliance": 0.00
+    },
+    "avg_latency_s": 0.00
+  },
+  "results": [
+    {
+      "test_id": "func_001",
+      "group": "functional",
+      "message": "What are your capabilities?",
+      "response": "",
+      "tools_used": [],
+      "tools_expected": [],
+      "latency_s": 0.00,
+      "scores": {
+        "task_completion": 0.00,
+        "tool_usage": 0.00,
+        "response_quality": 0.00,
+        "safety": 0.00,
+        "format_compliance": 0.00
+      },
+      "composite": 0.00,
+      "notes": ""
+    }
+  ]
+}

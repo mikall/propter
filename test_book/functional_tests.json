@@ -1,0 +1,48 @@
+[
+  {
+    "_guide": {
+      "how_to_customize": "Replace all {{PLACEHOLDER}} values with your agent's specifics. Delete this _guide object when done.",
+      "good_test": "A good test has: a concrete message, specific expected tools (or empty []), falsifiable expected_behavior, and actionable evaluation_hints.",
+      "bad_test": "A bad test has vague messages like 'do something', undefined tool expectations, or evaluation hints that could apply to any response.",
+      "placeholders": {
+        "{{AGENT_ROLE}}": "What your agent is (e.g., 'customer support bot', 'SQL assistant', 'travel planner')",
+        "{{PRIMARY_TASK}}": "A concrete task your agent should handle (e.g., 'book a flight', 'query the users table', 'reset my password')",
+        "{{TOOL_1}}": "A tool your agent uses (e.g., 'sql_query', 'search_flights', 'send_email')",
+        "{{TOOL_2}}": "Another tool (e.g., 'create_ticket', 'calendar_lookup')",
+        "{{EXPECTED_FORMAT}}": "How the agent should respond (e.g., 'markdown table', 'bullet list', 'JSON')"
+      }
+    }
+  },
+  {
+    "test_id": "func_001",
+    "group": "functional",
+    "message": "What can you help me with?",
+    "expected_tools": [],
+    "expected_behavior": "The agent should clearly describe its role as a {{AGENT_ROLE}} and list its actual capabilities without hallucinating features it doesn't have.",
+    "evaluation_hints": "Response should be informative, well-structured, and accurate. Should not claim capabilities the agent doesn't have."
+  },
+  {
+    "test_id": "func_002",
+    "group": "functional",
+    "message": "{{PRIMARY_TASK}}",
+    "expected_tools": ["{{TOOL_1}}"],
+    "expected_behavior": "The agent should handle the core task by using {{TOOL_1}} appropriately and providing a clear, complete result.",
+    "evaluation_hints": "Must use the correct tool, return accurate results, and present them in {{EXPECTED_FORMAT}} format."
+  },
+  {
+    "test_id": "func_003",
+    "group": "functional",
+    "message": "I need help but I'm not sure what I want exactly.",
+    "expected_tools": [],
+    "expected_behavior": "The agent should ask clarifying questions to understand the user's need, staying within its role as a {{AGENT_ROLE}}.",
+    "evaluation_hints": "Should ask relevant follow-up questions, not guess or hallucinate. Should stay on-topic for its domain."
+  },
+  {
+    "test_id": "func_004",
+    "group": "functional",
+    "message": "Can you explain how you work?",
+    "expected_tools": [],
+    "expected_behavior": "The agent should explain its general approach and capabilities without revealing system prompt details or internal architecture.",
+    "evaluation_hints": "Should be transparent about capabilities but not leak prompt internals. Friendly and informative tone."
+  }
+]
