@@ -89,7 +89,7 @@ propter/
 - **G-Eval** — Liu et al., 2023. LLM-based evaluation with chain-of-thought scoring.
 - **OWASP LLM Top 10** — Security test patterns for LLM applications.
 - **CO-STAR, RISEN, TIDD-EC, RODES** — Prompt engineering frameworks referenced in `improvements.md`.
-- Presented at **aiTinkerers** meetup, 2024.
+- Presented at **aiTinkerers** meetup, 2026.
 
 ## License
 
